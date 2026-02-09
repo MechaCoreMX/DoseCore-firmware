@@ -42,21 +42,28 @@ The firmware is responsible for:
 
 ## Bill of Materials (BOM)
 
-| Component | Qty |
-|----------|-----|
-| Arduino Mega 2560 | 1 |
-| 360° servomotor DS04-NFC | 1 |
-| LM2596 DC–DC regulator | 1 |
-| DS3231 RTC module | 1 |
-| Buzzer | 1 |
-| Reed switch (N.O.) | 4 |
-| 4×4 matrix keypad | 1 |
-| 16×2 LCD (HD44780) | 1 |
-| Potentiometer 10 kΩ | 1 |
-| Resistor 220 Ω | 1 |
-| Neodymium magnet (6 × 3 mm) | 1 |
-| 12 V – 3 A power supply | 1 |
-| 3D-printed parts (PLA) | ~150 g |
+The following table lists the main components required to assemble the
+**DoseCore: Programmable Medication Dispenser** prototype.  
+All costs are indicative and provided for reference only.
+
+| Component | Qty. | Unit cost (USD) | Total cost (USD) | Supplier | Material |
+|----------|------|------------------|------------------|----------|----------|
+| Arduino Mega 2560 microcontroller | 1 | 24.50 | 24.50 | AliExpress | Microcontroller |
+| 360° servomotor DS04-NFC | 1 | 2.72 | 2.72 | AliExpress | Electronic |
+| LM2596 DC–DC regulator module | 1 | 1.02 | 1.02 | AliExpress | Electronic |
+| DS3231 RTC module | 1 | 1.02 | 1.02 | AliExpress | Electronic |
+| Passive buzzer | 1 | 1.02 | 0.41 | AliExpress | Electronic |
+| Reed switch (Normally Open) | 4 | 1.02 | 1.02 | AliExpress | Electronic |
+| 4×4 matrix keypad | 1 | 1.02 | 1.02 | AliExpress | Electronic |
+| 16×2 LCD display (HD44780 compatible) | 1 | 1.02 | 1.02 | AliExpress | Electronic |
+| Potentiometer 10 kΩ | 1 | 2.89 | 2.89 | AliExpress | Electronic |
+| Resistor 220 Ω | 1 | 1.02 | 0.05 | AliExpress | Electronic |
+| Neodymium magnet (6 × 3 mm) | 1 | 1.02 | 0.10 | AliExpress | Electronic |
+| AC/DC power supply 12 V – 3 A | 1 | 1.02 | 1.02 | AliExpress | Electronic |
+| 3D-printed parts set (PLA, ~150 g) | 1 kg | 8.00 | 1.20 | AliExpress | Mechanical / Structural |
+
+**Note:** Prices correspond to typical online suppliers and may vary depending on
+region, availability, and purchase volume.
 
 ---
 
