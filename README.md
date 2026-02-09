@@ -147,6 +147,36 @@ The LCD is connected in 4-bit parallel mode.
 
 ---
 
+## Repository Structure (Arduino IDE Compatible)
+
+All files are located in the root folder to ensure compatibility with the
+**Arduino IDE**, which does not compile nested source directories by default.
+
+```text
+DoseCore-firmware/
+├── main.ino              # Firmware entry point (setup and loop)
+├── pins.h                # Hardware pin mapping
+├── config.h              # Global configuration and timing parameters
+├── types.h               # Data structures and enumerations
+├── globals.h             # Global declarations
+├── globals.cpp           # Global object instantiation
+├── motion.h              # Motion control interface
+├── motion.cpp            # Servo and positioning logic
+├── ui.h                  # User interface interface
+├── ui.cpp                # LCD and keypad implementation
+├── alarm.h               # Alarm system interface
+├── alarm.cpp             # Alarm and dispensing logic
+├── legacy/               # Historical firmware versions (not used in build)
+│   ├── README.md         # Description of legacy files
+│   ├── Code-V2.ino       # Monolithic prototype firmware (legacy)
+│   └── Code-V1.ino       # Initial prototype firmware (legacy)
+├── README.md              # Project documentation
+├── LICENSE                # Apache License 2.0
+└── CITATION.cff           # Citation metadata
+```
+
+---
+
 ## Reproducibility
 
 The following steps describe how to reproduce the firmware behavior of the  
@@ -253,25 +283,10 @@ licensing terms specified in this project.
 
 ---
 
-## Repository Structure (Arduino IDE Compatible)
+## Legacy Code
 
-All files are located in the root folder to ensure compatibility with the
-**Arduino IDE**, which does not compile nested source directories by default.
+The `legacy/` directory contains earlier monolithic firmware versions used during
+the initial prototyping phase of the DoseCore system (e.g., `CodeV2.ino`).
 
-```text
-DoseCore/
-├── main.ino        # Firmware entry point (setup and loop)
-├── pins.h          # Hardware pin mapping
-├── config.h        # Global configuration and timing parameters
-├── types.h         # Data structures and enumerations
-├── globals.h       # Global declarations
-├── globals.cpp     # Global object instantiation
-├── motion.h        # Motion control interface
-├── motion.cpp      # Servo and positioning logic
-├── ui.h            # User interface interface
-├── ui.cpp          # LCD and keypad implementation
-├── alarm.h         # Alarm system interface
-├── alarm.cpp       # Alarm and dispensing logic
-├── README.md
-├── LICENSE
-└── CITATION.cff
+These files are provided for historical reference only and are **not** required
+to compile or run the current firmware version described in this repository.
