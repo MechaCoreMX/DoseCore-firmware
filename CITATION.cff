@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+title: "DoseCore: Programmable Medication Dispenser Firmware"
+message: "If you use this software, please cite it as described below."
+type: software
+version: 1.0.0
+license: Apache-2.0
+repository-code: "https://github.com/USERNAME/DoseCore"
+
+authors:
+  - family-names: Apellido1
+    given-names: Nombre1
+    affiliation: Institución 1
+  - family-names: Apellido2
+    given-names: Nombre2
+    affiliation: Institución 2
+  - family-names: Apellido3
+    given-names: Nombre3
+    affiliation: Institución 3
+  - family-names: Apellido4
+    given-names: Nombre4
+    affiliation: Institución 4
+  - family-names: Apellido5
+    given-names: Nombre5
+    affiliation: Institución 5
