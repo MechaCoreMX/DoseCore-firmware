@@ -1,7 +1,8 @@
-# DoseCore – Smart Programmable Pillbox (Firmware)
+# DoseCore: Programmable Medication Dispenser – Firmware
 
-This repository contains the **firmware source code** for **DoseCore**, a smart
-programmable pillbox designed for digital medication management.
+This repository contains the **firmware source code** for **DoseCore: Programmable
+Medication Dispenser**, a smart, programmable pillbox designed for digital
+medication management.
 
 DoseCore is a low-cost, microcontroller-based assistive device that automates
 medication dispensing through scheduled alarms, controlled mechanical actuation,
@@ -18,13 +19,12 @@ principles.
 
 Medication non-adherence represents a major challenge in healthcare, particularly
 for elderly patients and individuals with chronic conditions. DoseCore addresses
-this problem through a compact, programmable pillbox that combines mechanical
-dispensing, real-time scheduling, and audiovisual alerts.
+this problem through a compact, programmable medication dispenser that combines
+mechanical dispensing, real-time scheduling, and audiovisual alerts.
 
 Unlike commercial smart pill dispensers, DoseCore is designed as an open and
 modifiable system, emphasizing affordability, simplicity of use, and transparency
-of design. The device is built using commercially available electronic components
-and custom 3D-printed mechanical parts.
+of design.
 
 ---
 
