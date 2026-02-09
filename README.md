@@ -42,21 +42,21 @@ The firmware is responsible for:
 
 ## Bill of Materials (BOM)
 
-| ID | Component | Qty | Unit Cost (USD) |
-|----|----------|-----|-----------------|
-| H | Arduino Mega 2560 | 1 | 24.50 |
-| D | 360° servomotor DS04-NFC | 1 | 2.72 |
-| I | LM2596 DC–DC regulator | 1 | 1.02 |
-| J | DS3231 RTC module | 1 | 1.02 |
-| K | Buzzer | 1 | 1.02 |
-| F | Reed switch (N.O.) | 4 | 1.02 |
-| C | 4×4 matrix keypad | 1 | 1.02 |
-| E | 16×2 LCD (HD44780) | 1 | 1.02 |
-| L | Potentiometer 10 kΩ | 1 | 2.89 |
-| M | Resistor 220 Ω | 1 | 1.02 |
-| B | Neodymium magnet (6 × 3 mm) | 1 | 1.02 |
-| N | 12 V – 3 A power supply | 1 | 1.02 |
-| A,G | 3D-printed parts (PLA, ~150 g) | — | 8.00 |
+| Component | Qty |
+|----------|-----|
+| Arduino Mega 2560 | 1 |
+| 360° servomotor DS04-NFC | 1 |
+| LM2596 DC–DC regulator | 1 |
+| DS3231 RTC module | 1 |
+| Buzzer | 1 |
+| Reed switch (N.O.) | 4 |
+| 4×4 matrix keypad | 1 |
+| 16×2 LCD (HD44780) | 1 |
+| Potentiometer 10 kΩ | 1 |
+| Resistor 220 Ω | 1 |
+| Neodymium magnet (6 × 3 mm) | 1 |
+| 12 V – 3 A power supply | 1 |
+| 3D-printed parts (PLA) | ~150 g |
 
 ---
 
