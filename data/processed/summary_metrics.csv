@@ -1,0 +1,11 @@
+metric,value,unit,description
+n_cycles,100,cycles,Total number of actuation cycles evaluated
+success_rate,100,percent,Percentage of successful compartment alignments
+mean_angular_error,2.52,degrees,Average angular positioning error
+std_angular_error,1.43,degrees,Standard deviation of angular positioning error
+p95_angular_error,4.75,degrees,95th percentile of angular positioning error
+max_angular_error,5,degrees,Maximum observed angular positioning error
+mean_idle_current,90,mA,Average current consumption at rest
+std_idle_current,0,mA,Standard deviation of idle current
+mean_peak_current,479.2,mA,Average peak current during actuation
+std_peak_current,14.54,mA,Standard deviation of peak current during actuation
