@@ -1,32 +1,3 @@
-/*
-  Pastillero Automatizado - Firmware V2 (Minimalista + Manual)
-  Plataforma: Arduino Mega 2560
-
-  Teclas:
-   - A = Abrir manual compartimento A (queda esperando 6 para regresar HOME)
-   - B = Abrir manual compartimento B (queda esperando 6 para regresar HOME)
-   - C = Abrir manual compartimento C (queda esperando 6 para regresar HOME)
-   - D = Configurar 1 dosis (elige comp 1/2/3, dosis 1/2/3, HH, MM)
-   - 6 = ACK (para silenciar alarma y regresar a HOME / o regresar en manual)
-
-  Hardware:
-   - RTC DS3231 (RTClib)
-   - LCD 16x2 paralelo (LiquidCrystal pins: 42,44,46,48,50,52)
-   - Keypad 4x4 (filas: 22,24,26,28 / columnas: 30,32,34,36)
-   - Servo rotación continua en pin 6 (comandos 69/90/99)
-   - Buzzer pasivo en A3
-   - Reed switches (INPUT_PULLUP, activo LOW):
-        HOME: pin 7
-        A:    pin 3
-        B:    pin 4
-        C:    pin 5
-
-  Movimiento (deducido del firmware original):
-   - A: ir 99, volver 69
-   - B: ir 99, volver 69
-   - C: ir 69, volver 99  (camino corto)
-*/
-
 #include <Wire.h>
 #include <RTClib.h>
 #include <LiquidCrystal.h>
@@ -350,3 +321,4 @@ void loop(){
 
   delay(150);
 }
+
