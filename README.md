@@ -235,6 +235,7 @@ hardware/schematics/diagrama.pdf
 3D printable enclosure components are available in:
 
 hardware/stl/
+
 ---
 
 # Firmware
@@ -268,8 +269,7 @@ scientific reproducibility.
 
 Located at:
 
-hardware/stl/
-
+data/raw/experimental_data.csv
 
 The dataset includes 100 actuation cycles with measurements of:
 
@@ -285,7 +285,6 @@ The dataset includes 100 actuation cycles with measurements of:
 Located at:
 
 data/processed/summary_metrics.csv
-
 
 The computed performance indicators include:
 
