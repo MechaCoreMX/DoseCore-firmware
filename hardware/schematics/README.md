@@ -14,16 +14,16 @@ Arduino Mega 2560 and all peripheral components used in the system.
 
 Electrical connection diagram of the full system, including:
 
-- Arduino Mega 2560 (ATmega2560)
-- DS3231 Real-Time Clock (RTC)
-- 4×4 matrix keypad
-- 16×2 LCD display (HD44780 compatible, 1602A)
-- 360° continuous rotation servo motor
-- LM2596 DC–DC voltage regulator
-- Reed switches (compartment positioning sensors)
-- Buzzer
-- Potentiometer (LCD contrast control)
-- External 12 V power supply
+- (H) Arduino Mega 2560 (ATmega2560)
+- (J) DS3231 Real-Time Clock (RTC)
+- (C) 4×4 matrix keypad
+- (E) 16×2 LCD display (HD44780 compatible, 1602A)
+- (D) 360° continuous rotation servo motor
+- (I) LM2596 DC–DC voltage regulator
+- (F) Reed switches (compartment positioning sensors)
+- (K) Buzzer
+- (L) Potentiometer (LCD contrast control)
+- (N) External 12 V power supply
 
 ---
 
