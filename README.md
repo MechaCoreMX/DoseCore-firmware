@@ -1,29 +1,37 @@
-# DoseCore: Programmable Medication Dispenser – Firmware
+# DoseCore: Programmable Medication Dispenser
 
-This repository contains the firmware source code for **DoseCore: Programmable
-Medication Dispenser**, a smart and programmable pillbox designed to support
+DoseCore is a programmable medication dispensing system designed to improve
 medication adherence through scheduled alarms and controlled mechanical
-dispensing.
+compartment positioning.
 
-The system is implemented using an Arduino Mega 2560 and integrates a real-time
-clock, user interface, acoustic alerts, and a servo-driven dispensing mechanism.
-The firmware is part of an academic research project currently under editorial
-review for publication in *HardwareX*.
+This repository contains the complete research prototype, including:
+
+- Embedded firmware (Arduino Mega 2560)
+- Electrical schematics
+- 3D-printable enclosure files (STL)
+- Experimental validation dataset
+- Statistical performance analysis notebook
+- System architecture documentation
+
+The project is currently under editorial review for publication in *HardwareX*.
 
 ---
 
-## System Overview
+# System Overview
 
-DoseCore is a low-cost, microcontroller-based assistive device aimed at improving
-medication management, particularly for elderly users and patients with chronic
-conditions. The system combines time-based scheduling with a mechanical dispensing
-mechanism and a simple human–machine interface.
+DoseCore is a low-cost, microcontroller-based assistive device aimed at
+supporting elderly users and patients with chronic conditions who require
+scheduled medication intake.
 
-The firmware is responsible for:
-- Time monitoring and alarm scheduling
-- User interaction via keypad and LCD
-- Servo-based compartment positioning
-- Safe and repeatable dispensing actions
+The system integrates:
+
+- Real-time clock (RTC-based scheduling)
+- Servo-driven compartment positioning
+- Reed switch feedback verification
+- Keypad and LCD human–machine interface
+- Audible alarm notification
+
+The firmware ensures safe, repeatable, and verifiable dispensing actions.
 
 ---
 
@@ -147,146 +155,224 @@ The LCD is connected in 4-bit parallel mode.
 
 ---
 
-## Repository Structure (Arduino IDE Compatible)
-
-All files are located in the root folder to ensure compatibility with the
-**Arduino IDE**, which does not compile nested source directories by default.
+# Repository Structure
 
 ```text
-DoseCore-firmware/
-├── main.ino              # Firmware entry point (setup and loop)
-├── pins.h                # Hardware pin mapping
-├── config.h              # Global configuration and timing parameters
-├── types.h               # Data structures and enumerations
-├── globals.h             # Global declarations
-├── globals.cpp           # Global object instantiation
-├── motion.h              # Motion control interface
-├── motion.cpp            # Servo and positioning logic
-├── ui.h                  # User interface interface
-├── ui.cpp                # LCD and keypad implementation
-├── alarm.h               # Alarm system interface
-├── alarm.cpp             # Alarm and dispensing logic
-├── legacy/               # Historical firmware versions (not used in build)
-│   ├── README.md         # Description of legacy files
-│   ├── Code-V2.ino       # Monolithic prototype firmware (legacy)
-│   └── Code-V1.ino       # Initial prototype firmware (legacy)
-├── README.md              # Project documentation
-├── LICENSE                # Apache License 2.0
-└── CITATION.cff           # Citation metadata
+DoseCore/
+│
+├── main.ino
+├── pins.h
+├── config.h
+├── types.h
+├── globals.h
+├── globals.cpp
+├── motion.cpp / motion.h
+├── ui.cpp / ui.h
+├── alarm.cpp / alarm.h
+│
+├── hardware/
+│   ├── schematics/
+│   │   ├── diagrama.pdf
+│   │   └── README.md
+│   │
+│   └── stl/
+│       ├── Pillbox case body.STL
+│       ├── Pillbox case low.STL
+│       ├── Pillbox case top.STL
+│       └── README.md
+│
+├── docs/
+│   ├── DoseCore_system_architecture.pdf
+│   ├── DoseCore_firmware_flowchart.pdf
+│   └── README.md
+│
+├── data/
+│   ├── raw/
+│   │   ├── experimental_data.csv
+│   │   └── README.md
+│   │
+│   ├── processed/
+│   │   ├── summary_metrics.csv
+│   │   └── README.md
+│   │
+│   └── README.md
+│
+├── analysis/
+│   ├── performance_analysis.ipynb
+│   └── README.md
+│
+├── legacy/
+│   ├── Code-V1.ino
+│   ├── Code-V2.ino
+│   └── README.md
+│
+├── LICENSE
+├── CITATION.cff
+└── README.md
 ```
 
 ---
 
-## Reproducibility
+# Hardware Description
 
-The following steps describe how to reproduce the firmware behavior of the  
-**DoseCore: Programmable Medication Dispenser** using the Arduino IDE.
+## Core Components
 
-### 1. Obtain the Source Code
-Clone or download the source code from the public GitHub repository associated
-with this project. The repository can be accessed directly through the URL
-provided in the project documentation.
+The DoseCore prototype is built around a modular embedded architecture
+integrating mechanical, electronic, and control subsystems.
 
-Alternatively, the source code can be downloaded as a ZIP archive from the
-GitHub repository page.
+- **Microcontroller:** Arduino Mega 2560  
+- **Actuator:** 360° continuous rotation servo motor (DS04-NFC)  
+- **Position Feedback:** Reed switches (active-low configuration)  
+- **User Interface:** 4×4 matrix keypad and 16×2 LCD (HD44780 compatible)  
+- **Timing Module:** DS3231 Real-Time Clock (RTC)  
+- **Power Supply:** 12 V external source with LM2596 DC–DC regulator  
+- **Enclosure:** Custom 3D-printed PLA structure  
 
-(`git clone https://github.com/MechaCoreMX/DoseCore-firmware.git`)
+The complete electrical wiring diagram is provided in:
 
-### 2. Install Dependencies
-Open the **Arduino IDE** and install the required libraries using the  
-**Library Manager** (`Sketch → Include Library → Manage Libraries`):
+hardware/schematics/diagrama.pdf
 
-- **RTClib** (by Adafruit)  
-- **Keypad**  
-- **LiquidCrystal** (included by default with Arduino IDE)  
-- **Servo** (included by default with Arduino IDE)
+3D printable enclosure components are available in:
 
-### 3. Open the Firmware
-Open the file **`main.ino`** located in the root directory of the repository using
-the Arduino IDE.
+hardware/stl/
+---
 
-### 4. Select Target Hardware
-In the Arduino IDE, configure the following options:
+# Firmware
 
-- **Board:** Arduino Mega 2560  
-- **Processor:** ATmega2560  
-- **Port:** Select the serial port corresponding to your board
+The firmware is modular and organized into dedicated components for:
 
-### 5. Compile and Upload
-Compile the firmware using the **Verify** function and then upload it to the
-Arduino Mega 2560 using the **Upload** function.
+- Motion control
+- Alarm management
+- User interface handling
+- Hardware abstraction
 
-### 6. Expected Startup Behavior
-After powering the system, the following sequence should be observed:
+It is fully compatible with **Arduino IDE 2.x**.
 
-1. The LCD initializes and displays a startup message.
-2. The servo motor performs an automatic homing routine until the home reed
-   switch is detected.
-3. The system enters idle mode and displays the current date and time.
-4. The firmware starts monitoring scheduled medication doses.
+### Required Libraries
 
-### 7. Basic Functional Test
-To verify correct operation:
+Install using the Arduino Library Manager:
 
-- Press **A**, **B**, or **C** on the keypad to manually open the corresponding
-  compartment.
-- Press **D** to enter the dose configuration menu.
-- At a scheduled time, an audible alarm is triggered and the corresponding
-  compartment is automatically exposed.
-
-If the above behavior is observed, the firmware is considered to be operating
-correctly.
+- RTClib (Adafruit)
+- Keypad
+- LiquidCrystal
+- Servo
 
 ---
 
-## Code Availability
+# Experimental Validation
 
-The firmware source code for **DoseCore: Programmable Medication Dispenser** is
-publicly available through the project’s GitHub repository.
+The repository includes complete experimental validation data to ensure
+scientific reproducibility.
 
-A stable release corresponding to the version described in the associated
-scientific publication will be archived on **Zenodo** and assigned a **Digital
-Object Identifier (DOI)** to ensure long-term accessibility and reproducibility.
+## Raw Dataset
 
-The GitHub repository contains the actively maintained development version of the
-firmware, while the Zenodo archive will serve as the permanent reference version
-for citation purposes.
+Located at:
+
+hardware/stl/
+
+
+The dataset includes 100 actuation cycles with measurements of:
+
+- Angular positioning error (degrees)
+- Idle current (mA)
+- Peak current during actuation (mA)
+- Success indicator (binary)
 
 ---
 
-## License
+## Processed Metrics
+
+Located at:
+
+data/processed/summary_metrics.csv
+
+
+The computed performance indicators include:
+
+- Total cycles (n = 100)
+- Success rate (100%)
+- Mean angular error: 2.52°
+- Standard deviation: 1.43°
+- 95th percentile error: ~4.75°
+- Maximum angular error: 5°
+- Mean idle current: 90 mA
+- Mean peak current: 479.2 mA
+
+---
+
+# Performance Analysis
+
+The statistical analysis used to compute these metrics is available in:
+
+analysis/performance_analysis.ipynb
+
+
+Running the notebook reproduces all summary statistics reported in
+`summary_metrics.csv`.
+
+---
+
+# Reproducibility
+
+## Firmware
+
+1. Clone or download the repository.
+2. Install required Arduino libraries.
+3. Open `main.ino` in Arduino IDE.
+4. Select board: Arduino Mega 2560.
+5. Compile and upload.
+
+## Experimental Metrics
+
+1. Ensure dataset is located in `data/raw/`.
+2. Open `analysis/performance_analysis.ipynb`.
+3. Run all cells sequentially.
+
+The computed values should match those in
+`data/processed/summary_metrics.csv`.
+
+---
+
+# Code Availability
+
+The actively maintained firmware version is hosted on GitHub.
+
+A stable release corresponding to the manuscript is archived on Zenodo
+and assigned a DOI to ensure long-term preservation and citation.
+
+Citation metadata is provided in the `CITATION.cff` file.
+
+---
+
+# License
 
 This software is released under the **Apache License 2.0**.
 
-The Apache License 2.0 permits use, modification, and redistribution of the
-source code for both academic and commercial purposes, provided that proper
-attribution is given and that any modifications are clearly documented.
+The license permits academic and commercial use, modification, and
+redistribution, provided that proper attribution is maintained.
 
-A copy of the full license text is provided in the `LICENSE` file included in
-this repository.
+See the `LICENSE` file for the complete license text.
 
 ---
 
-## Intellectual Property Notice
+# Intellectual Property Notice
 
-This firmware is associated with a hardware system for which a patent application
-is currently under evaluation.
+This firmware is associated with a hardware system for which a patent
+application is currently under evaluation.
 
-The publication and open-source distribution of this software do **not** grant
-any rights to manufacture, commercialize, reproduce, or derive the associated
-hardware design. All rights related to the physical device, mechanical structure,
-and system-level integration remain reserved by the authors.
+The open-source distribution of this software does **not** grant rights
+to manufacture, commercialize, or reproduce the associated hardware
+design without authorization from the authors.
 
-This repository is intended to support scientific transparency, reproducibility
-of the firmware behavior, and academic dissemination, in accordance with the
-licensing terms specified in this project.
+This repository is intended for scientific transparency, academic
+dissemination, and reproducibility of the research prototype.
 
 ---
 
-## Legacy Code
+# Legacy Code
 
-The `legacy/` directory contains earlier monolithic firmware versions used during
-the initial prototyping phase of the DoseCore system (e.g., `Code-V2.ino`).
+The `legacy/` directory contains earlier monolithic firmware versions
+used during initial prototyping.
 
-These files are provided for historical reference only and are **not** required
-to compile or run the current firmware version described in this repository.
+These files are provided for historical reference only and are not
+required to compile or operate the current firmware version.
