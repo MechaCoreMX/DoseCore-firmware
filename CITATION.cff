@@ -2,23 +2,24 @@ cff-version: 1.2.0
 title: "DoseCore: Programmable Medication Dispenser Firmware"
 message: "If you use this software, please cite it as described below."
 type: software
-version: 1.0.0
+version: 1.0.1
+doi: 10.5281/zenodo.18676168
 license: Apache-2.0
-repository-code: "https://github.com/USERNAME/DoseCore"
+repository-code: "https://github.com/MechaCoreMX/DoseCore-firmware"
 
 authors:
   - family-names: Cuevas Chávez
     given-names: Jorge Ivan
-    affiliation: Centro Universitario de Ciecias Exactas e Ingenierías (CUCEI), Universidad de Guadalajara
+    affiliation: Centro Universitario de Ciencias Exactas e Ingenierías (CUCEI), Universidad de Guadalajara
   - family-names: Gudiño Ochoa
     given-names: Alberto
-    affiliation: Centro Universitario de Ciecias Exactas e Ingenierías (CUCEI), Universidad de Guadalajara
+    affiliation: Centro Universitario de Ciencias Exactas e Ingenierías (CUCEI), Universidad de Guadalajara
   - family-names: Lúa Madrigal
     given-names: Olimpo
     affiliation: Tecnológico Nacional de México (TecNM), Campus Colima
   - family-names: Barajas Contreras
     given-names: Andres
-    affiliation: Centro Universitario de Ciecias Exactas e Ingenierías (CUCEI), Universidad de Guadalajara
+    affiliation: Centro Universitario de Ciencias Exactas e Ingenierías (CUCEI), Universidad de Guadalajara
   - family-names: Ruiz Velázquez
     given-names: Eduardo
-    affiliation: Centro Universitario de Ciecias Exactas e Ingenierías (CUCEI), Universidad de Guadalajara
+    affiliation: Centro Universitario de Ciencias Exactas e Ingenierías (CUCEI), Universidad de Guadalajara
