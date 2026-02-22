@@ -60,16 +60,16 @@ All costs are indicative and provided for reference only.
 | 360° servomotor DS04-NFC | 1 | 2.72 | 2.72 | AliExpress | Electronic |
 | LM2596 DC–DC regulator module | 1 | 1.02 | 1.02 | AliExpress | Electronic |
 | DS3231 RTC module | 1 | 1.02 | 1.02 | AliExpress | Electronic |
-| Passive buzzer | 1 | 1.02 | 0.10 | AliExpress | Electronic |
-| Reed switch (Normally Open) | 4 | 1.02 | 0.41 | AliExpress | Electronic |
+| Passive buzzer | 1 | 0.10 | 0.10 | AliExpress | Electronic |
+| Reed switch (Normally Open) | 4 | 0.102 | 0.408 | AliExpress | Electronic |
 | 4×4 matrix keypad | 1 | 1.02 | 1.02 | AliExpress | Electronic |
 | 16×2 LCD display (HD44780 compatible) | 1 | 1.02 | 1.02 | AliExpress | Electronic |
 | Potentiometer 10 kΩ | 1 | 2.89 | 2.89 | AliExpress | Electronic |
-| Resistor 220 Ω | 1 | 1.02 | 0.05 | AliExpress | Electronic |
-| Neodymium magnet (6 × 3 mm) | 1 | 1.02 | 0.10 | AliExpress | Electronic |
+| Resistor 220 Ω | 1 | 0.051| 0.051 | AliExpress | Electronic |
+| Neodymium magnet (6 × 3 mm) | 1 | 0.102 | 0.102 | AliExpress | Electronic |
 | AC/DC power supply 12 V – 3 A | 1 | 1.02 | 1.02 | AliExpress | Electronic |
-| 3D-printed parts set (PLA) | ~150 g | 8.00 | 1.20 | AliExpress | Mechanical / Structural |
-| 3Coil of 30 AWG copper wire (10 m) | 5 | 1.02 | 0.51 | AliExpress | Conductor |
+| 3D-printed parts set (PLA) | ~150 g | 0.008 | 1.20 | AliExpress | Mechanical / Structural |
+| 3Coil of 30 AWG copper wire (10 m) | 5 | 0.102 | 0.51 | AliExpress | Conductor |
 
 **Note:** Prices correspond to typical online suppliers and may vary depending on
 region, availability, and purchase volume.
