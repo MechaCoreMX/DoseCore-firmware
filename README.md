@@ -69,7 +69,7 @@ All costs are indicative and provided for reference only.
 | Neodymium magnet (6 × 3 mm) | 1 | 0.102 | 0.102 | AliExpress | Electronic |
 | AC/DC power supply 12 V – 3 A | 1 | 1.02 | 1.02 | AliExpress | Electronic |
 | 3D-printed parts set (PLA) | ~150 g | 0.008 | 1.20 | AliExpress | Mechanical / Structural |
-| 3Coil of 30 AWG copper wire (10 m) | 5 | 0.102 | 0.51 | AliExpress | Conductor |
+| 3Coil of 30 AWG copper wire (10 m) | 5 m | 0.102 | 0.51 | AliExpress | Conductor |
 
 **Note:** Prices correspond to typical online suppliers and may vary depending on
 region, availability, and purchase volume.
